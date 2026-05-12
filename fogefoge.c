@@ -60,7 +60,15 @@ int acabou(){
 
     POSICAO pos;
     int fogefogemapa = encontramapa(&m, &pos, HEROI);
+    if(!fogefogemapa) printf("\nQue pena, voce morreu :(\n");
     return !fogefogemapa;
+}
+
+int morreu(){
+    POSICAO pos;
+    int fantasma = encontramapa(&m, &pos, FANTASMA);
+    if(!fantasma) printf("\nParabens! Voce ganhou!\n");
+    return !fantasma;
 }
 
 int ehdirecao(char direcao){
@@ -107,10 +115,10 @@ void explodepilula(){
 
     if(!tempilula) return;
 
-    explodepilula2(heroi.x, heroi.y, 0, 1, 3);
-    explodepilula2(heroi.x, heroi.y, 0, -1, 3);
-    explodepilula2(heroi.x, heroi.y, 1, 0, 3);
-    explodepilula2(heroi.x, heroi.y, -1, 0, 3);
+    explodepilula2(heroi.x, heroi.y, 0, 1, 3);  // →  direita
+    explodepilula2(heroi.x, heroi.y, 0, -1, 3); // ←  esquerda
+    explodepilula2(heroi.x, heroi.y, 1, 0, 3);  // ↓  baixo
+    explodepilula2(heroi.x, heroi.y, -1, 0, 3); // ↑  cima
 
     tempilula = 0;
 }
@@ -146,7 +154,7 @@ int main(){
         if(comando == BOMBA) explodepilula();
         fantasmas();
 
-    } while(!acabou());
+    } while(!acabou() && !morreu());
 
     liberar_mapa(&m);                  // libera a memória antes de sair
 }
