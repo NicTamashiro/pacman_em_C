@@ -5,44 +5,36 @@
 
 void boasvindas(){
     printf("\n");
-    printf("  ███████╗ ██████╗  ██████╗ ███████╗    ███████╗ ██████╗  ██████╗ ███████╗\n");
-    printf("  ██╔════╝██╔═══██╗██╔════╝ ██╔════╝    ██╔════╝██╔═══██╗██╔════╝ ██╔════╝\n");
-    printf("  █████╗  ██║   ██║██║  ███╗█████╗      █████╗  ██║   ██║██║  ███╗█████╗  \n");
-    printf("  ██╔══╝  ██║   ██║██║   ██║██╔══╝      ██╔══╝  ██║   ██║██║   ██║██╔══╝  \n");
-    printf("  ██║     ╚██████╔╝╚██████╔╝███████╗    ██║     ╚██████╔╝╚██████╔╝███████╗\n");
-    printf("  ╚═╝      ╚═════╝  ╚═════╝ ╚══════╝    ╚═╝      ╚═════╝  ╚═════╝ ╚══════╝\n");
+    printf("  +-+-+-+-+ +-+-+-+-+\n");
+    printf("  |F|O|G|E| |F|O|G|E|\n");
+    printf("  +-+-+-+-+ +-+-+-+-+\n");
     printf("\n");
-    printf("         .-.        Aperte WASD para mover, B para bomba!\n");
-    printf("        | OO|       Pegue a pilula (P) e exploda os fantasmas!\n");
-    printf("        |   |       \n");
-    printf("        '^^^'       Pressione ENTER para comecar...\n");
+    printf("   .-.        Aperte WASD para mover, B para bomba!\n");
+    printf("  | OO|       Pegue a pilula (P) e exploda os fantasmas!\n");
+    printf("  |   |       \n");
+    printf("  '^^^'       Pressione ENTER para comecar...\n");
     printf("\n");
-    getchar();
+    int c;
+    while((c = getchar()) != '\n' && c != EOF);
 }
 
 void voceganhou(){
     printf("\n");
-    printf("  ██╗   ██╗ ██████╗  ██████╗███████╗    ██████╗  █████╗ ███╗  ██╗██╗  ██╗ ██████╗ ██╗\n");
-    printf("  ██║   ██║██╔═══██╗██╔════╝██╔════╝   ██╔════╝ ██╔══██╗████╗ ██║██║  ██║██╔═══██╗██║\n");
-    printf("  ██║   ██║██║   ██║██║     █████╗     ██║  ███╗███████║██╔██╗██║███████║██║   ██║██║\n");
-    printf("  ╚██╗ ██╔╝██║   ██║██║     ██╔══╝     ██║   ██║██╔══██║██║╚████║██╔══██║██║   ██║╚═╝\n");
-    printf("   ╚████╔╝ ╚██████╔╝╚██████╗███████╗   ╚██████╔╝██║  ██║██║ ╚███║██║  ██║╚██████╔╝██╗\n");
-    printf("    ╚═══╝   ╚═════╝  ╚═════╝╚══════╝    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚══╝╚═╝  ╚═╝ ╚═════╝ ╚═╝\n");
+    printf("  +-+-+-+-+ +-+-+-+-+-+-+-+\n");
+    printf("  |V|O|C|E| |G|A|N|H|O|U|!\n");
+    printf("  +-+-+-+-+ +-+-+-+-+-+-+-+\n");
     printf("\n");
-    printf("        Todos os fantasmas foram eliminados! Parabens!\n");
+    printf("  Todos os fantasmas foram eliminados! Parabens!\n");
     printf("\n");
 }
 
 void voceperdeu(){
     printf("\n");
-    printf("  ██╗   ██╗ ██████╗  ██████╗███████╗    ██████╗ ███████╗██████╗ ██████╗ ███████╗██╗   ██╗\n");
-    printf("  ██║   ██║██╔═══██╗██╔════╝██╔════╝    ██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝██║   ██║\n");
-    printf("  ██║   ██║██║   ██║██║     █████╗      ██████╔╝█████╗  ██████╔╝██║  ██║█████╗  ██║   ██║\n");
-    printf("  ╚██╗ ██╔╝██║   ██║██║     ██╔══╝      ██╔═══╝ ██╔══╝  ██╔══██╗██║  ██║██╔══╝  ██║   ██║\n");
-    printf("   ╚████╔╝ ╚██████╔╝╚██████╗███████╗    ██║     ███████╗██║  ██║██████╔╝███████╗╚██████╔╝\n");
-    printf("    ╚═══╝   ╚═════╝  ╚═════╝╚══════╝    ╚═╝     ╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝ ╚═════╝\n");
+    printf("  +-+-+-+-+ +-+-+-+-+-+-+\n");
+    printf("  |V|O|C|E| |P|E|R|D|E|U|\n");
+    printf("  +-+-+-+-+ +-+-+-+-+-+-+\n");
     printf("\n");
-    printf("        Um fantasma te pegou! Mais sorte da proxima vez...\n");
+    printf("  Um fantasma te pegou! Mais sorte da proxima vez...\n");
     printf("\n");
 }
 
