@@ -5,5 +5,8 @@
 
 void imprimemapa(MAPA* m);
 void imprimeparte(char desenho[4][7], int parte);
+void boasvindas();
+void voceganhou();
+void voceperdeu();
 
 #endif

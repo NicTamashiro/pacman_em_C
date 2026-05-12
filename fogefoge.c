@@ -60,14 +60,12 @@ int acabou(){
 
     POSICAO pos;
     int fogefogemapa = encontramapa(&m, &pos, HEROI);
-    if(!fogefogemapa) printf("\nQue pena, voce morreu :(\n");
     return !fogefogemapa;
 }
 
 int morreu(){
     POSICAO pos;
     int fantasma = encontramapa(&m, &pos, FANTASMA);
-    if(!fantasma) printf("\nParabens! Voce ganhou!\n");
     return !fantasma;
 }
 
@@ -143,6 +141,8 @@ int main(){
     lemapa(&m);                        // le e aloca o mapa do arquivo
     encontramapa(&m, &heroi, HEROI); // encontra a posicao atual do heroi
 
+    boasvindas();
+
     do{
 
         printf("Tem pilula: %s\n", (tempilula ? "SIM" : "NAO"));
@@ -155,6 +155,9 @@ int main(){
         fantasmas();
 
     } while(!acabou() && !morreu());
+
+    if(morreu()) voceganhou();
+    else voceperdeu();
 
     liberar_mapa(&m);                  // libera a memória antes de sair
 }
